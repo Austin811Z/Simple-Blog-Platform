@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= post.title %> - Simple Blog</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('../partials/navbar') %>
+
+    <main>
+        <div class="container">
+            <a href="/posts" class="back-link">← Back to All Posts</a>
+            
+            <div class="post-full">
+                <h1><%= post.title %></h1>
+                <p><small>By <%= post.author %> • <%= post.date %></small></p>
+                <div class="post-content">
+                    <p><%= post.content %></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>
